@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristóbal Peña y Lillo | Artista Visual</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CRISTÓBAL PEÑA Y LILLO</div>
+        <ul class="nav-links">
+            <li><a href="#works" data-key="nav-works">OBRAS</a></li>
+            <li><a href="#about" data-key="nav-bio">TRAYECTORIA</a></li>
+            <li><a href="https://wa.link/rxuspj" data-key="nav-contact">CONTACTO</a></li>
+            <li><button id="lang-switch" class="lang-btn">EN</button></li>
+        </ul>
+    </nav>
+
+<header class="hero">
+    <img src="./hero.png" alt="Obra de Cristóbal Peña y Lillo" class="hero-bg-img">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1 data-key="hero-title">LUZ, MATERIA Y PERCEPCIÓN</h1>
+            <p data-key="hero-desc">Obras únicas que transforman el espacio a través de la luz,<br> el color y la materia.</p>
+            <a href="#works" class="btn-outline" data-key="btn-works">VER OBRAS</a>
+        </div>
+    </div>
+</header>
+
+    <!-- SOBRE EL ARTISTA -->
+    <section class="about" id="about">
+        <div class="about-text">
+            <h3 class="overline" data-key="about-overline">SOBRE EL ARTISTA</h3>
+            <h2 data-key="about-title">CRISTÓBAL PEÑA Y LILLO</h2>
+            
+            <div class="bio-container">
+                <p id="bio-intro" data-key="about-p-intro">
+                    Cristóbal Peña y Lillo desarrolla una trayectoria marcada por la síntesis, la percepción y la búsqueda constante de nuevos lenguajes visuales. Nacido en Mendoza en 1972, complementó su formación con estudios en Harvard University...
+                </p>
+                
+                <div id="bio-more" class="more-content">
+                    <p data-key="about-p-more-1">Antes de consolidar plenamente su práctica artística, construyó una destacada carrera como director creativo durante más de 18 años. Su agencia fue reconocida entre las más creativas del interior del país, obteniendo premios y desarrollando campañas de alto impacto.</p>
+                    <p data-key="about-p-more-2">En paralelo, sostuvo una producción artística continua, realizando exposiciones y proyectos junto a marcas y espacios de alto nivel como Porsche y Bodega Trivento, además de colecciones privadas y presentaciones en distintos países.</p>
+                    <p data-key="about-p-more-3">A partir de 2022, la incorporación de resinas translúcidas redefinió su producción. La obra evolucionó hacia superficies minimalistas donde luz, profundidad y movimiento conviven en equilibrio. En esta etapa emerge con fuerza una inspiración constante: el mar, su energía, sus reflejos y su dimensión contemplativa.</p>
+                    <p data-key="about-p-more-4">Hoy su trabajo se reconoce por crear piezas vivas, capaces de transformarse con cada cambio de luz y de generar una experiencia estética sofisticada, silenciosa e hipnótica dentro del espacio.</p>
+                </div>
+                <button id="read-more-btn" class="btn-expand">+</button>
+            </div>
+        </div>
+        <div class="about-img">
+            <img src="./artista.png" alt="Cristóbal Peña y Lillo">
+        </div>
+    </section>
+
+    <!-- OBRAS DISPONIBLES -->
+    <section class="works" id="works">
+        <h3 class="overline" data-key="works-title">OBRAS DISPONIBLES</h3>
+        <h2 class="work-subtitle" data-key="work-subtitle">LUZ Y MATERIA</h2>
+        
+        <div class="bio-container">
+            <!-- Párrafo inicial visible -->
+            <p id="work-intro" data-key="work-p-intro">
+                Las obras de Cristóbal Peña y Lillo nacen de la luz como lenguaje y de la materia como vehículo sensible. Cada pieza activa reflejos, profundidad y movimiento visual, generando una experiencia cambiante a cada hora del día. La imagen respira, vibra y se transforma con el entorno.
+            </p>
+            
+            <!-- Contenido oculto -->
+            <div id="work-more" class="more-content">
+                <p data-key="work-p-more-1">La luz del amanecer, el sol pleno de la tarde o una noche serena revelan versiones distintas de una misma obra. Esa variación permanente crea una relación íntima con el tiempo, el agua y el horizonte. En sus superficies habita una memoria del mar: brillo, calma, profundidad, energía y fluidez.</p>
+                <p data-key="work-p-more-2">En espacios minimalistas y arquitecturas contemporáneas encuentran una presencia natural. Aportan serenidad visual, sofisticación y un punto de contemplación para detenerse, observar y disfrutar cómo la luz recorre la pieza lentamente.</p>
+                <p data-key="work-p-more-3">Realizadas a mano mediante un proceso minucioso con resinas translúcidas, alcanzan una apariencia líquida, pulida y profunda. La técnica se integra al gesto artístico para dar lugar a superficies vibrantes que capturan la atención desde el primer instante.</p>
+                <p data-key="work-p-more-4">El espectador se aproxima, cambia de posición, descubre nuevos planos y participa de una interacción espontánea. La obra despierta curiosidad, invita a moverse y sostiene la mirada con elegancia.</p>
+                <p data-key="work-p-more-5">Para el artista, la luz representa la máxima expresión tecnológica de la naturaleza: precisión, energía, movimiento y belleza en estado puro. Cada obra reúne esos elementos y los convierte en una presencia viva dentro del espacio.</p>
+            </div>
+            <button id="read-more-work-btn" class="btn-expand">+</button>
+        </div>
+
+<div class="work-video-container-triple">
+            <div class="work-video-track">
+                <video autoplay muted loop playsinline class="work-video-item">
+                    <source src="./videobra.mov" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+            <div class="work-video-track">
+                <video autoplay muted loop playsinline class="work-video-item">
+                    <source src="./videobra.mov" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+            <div class="work-video-track">
+                <video autoplay muted loop playsinline class="work-video-item">
+                    <source src="./videobra.mov" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </div>
+
+<div class="grid-works">
+    <div class="work-item size-lg"><img src="./obra.png" alt="50x70"><span>50 x 70 cm</span></div>
+    <div class="work-item size-md"><img src="./obra.png" alt="40x50"><span>40 x 50 cm</span></div>
+    <div class="work-item size-sm"><img src="./obra.png" alt="35x35"><span>35 x 35 cm</span></div>
+    <div class="work-item size-xs"><img src="./obra.png" alt="26x35"><span>26 x 35 cm</span></div>
+    <div class="work-item size-xxs"><img src="./obra.png" alt="15x20"><span>15 x 20 cm</span></div>
+</div>
+        
+        <div class="center-btn">
+            <a href="https://wa.link/rxuspj" class="btn-outline" data-key="btn-info">SOLICITAR INFORMACIÓN</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left" data-key="footer-txt">OBRAS ÚNICAS. HECHAS A MANO EN ARGENTINA.</div>
+            <div class="footer-center">
+                <p>&copy; 2026 | <a href="https://www.instagram.com/daeweb.arg" target="_blank" class="brand-credit">DAEweb</a></p>
+            </div>
+            <div class="footer-right">
+                <a href="#">@CRISTOBALPENAYLILLO</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

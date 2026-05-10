@@ -1,5 +1,5 @@
-/* CRISTÓBAL PEÑA Y LILLO - ESTILO ARTÍSTICO MINIMALISTA
-   Configuración: Hero Full Width (Imagen en HTML) + Expansión de Bio/Obras
+/* CRISTÓBAL PEÑA Y LILLO - CÓDIGO FINAL INTEGRADO
+   Layout: Hero Responsive + Navbar Glass + Marcos Dorados + Imagen Lateral
 */
 
 :root {
@@ -30,26 +30,19 @@ h1, h2, h3, .logo {
     letter-spacing: 2px;
 }
 
-/* NAVEGACIÓN */
+/* NAVEGACIÓN (GLASSMORPHISM) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Reducido un poco para mayor elegancia */
-    position: fixed; /* Cambiado a fixed para que acompañe el scroll */
+    padding: 20px 5%;
+    position: fixed;
     width: 100%;
     z-index: 1000;
-    
-    /* Fondo negro con 60% de opacidad */
     background-color: rgba(0, 0, 0, 0.6); 
-    
-    /* Efecto de desenfoque tipo vidrio (Glassmorphism) */
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
-    
-    /* Borde sutil inferior opcional */
     border-bottom: 1px solid rgba(166, 138, 86, 0.1); 
-    
     transition: background-color 0.3s ease;
 }
 
@@ -79,27 +72,25 @@ h1, h2, h3, .logo {
     padding: 2px 10px;
     cursor: pointer;
     font-size: 0.75rem;
-    transition: 0.3s;
 }
 
-.lang-btn:hover { background: var(--gold); color: black; }
-
-/* SECCIÓN HERO - FULL WIDTH CON IMAGEN HTML */
+/* SECCIÓN HERO - RESPONSIVE */
 .hero {
     position: relative;
-    height: 100vh; /* Altura total de la pantalla */
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
+
 .hero-bg-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Esto asegura que la imagen cubra todo el espacio sin estirarse */
+    object-fit: cover;
     object-position: center;
     z-index: 1;
 }
@@ -110,7 +101,7 @@ h1, h2, h3, .logo {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35); /* Oscurece la imagen para resaltar texto */
+    background: rgba(0, 0, 0, 0.35);
     z-index: 2;
     display: flex;
     align-items: center;
@@ -131,28 +122,6 @@ h1, h2, h3, .logo {
     text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
 }
 
-.hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-
-/* BOTONES */
-.btn-outline {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid var(--gold);
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    transition: 0.3s;
-    background: transparent;
-}
-
-.btn-outline:hover { background: var(--gold); color: black; }
-
 /* SECCIÓN SOBRE EL ARTISTA */
 .about {
     padding: 100px 10%;
@@ -166,188 +135,139 @@ h1, h2, h3, .logo {
 .about-img img { 
     width: 100%; 
     filter: grayscale(100%); 
-    border-radius: 2px;
     transition: filter 0.6s ease;
 }
-.about-img img:hover { filter: grayscale(0%); }
 
-.overline { color: var(--gold); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 20px; display: block; }
-
-/* SECCIÓN OBRAS Y VIDEO */
-.works { padding: 100px 10%; background-color: var(--bg-dark); }
-.work-subtitle { font-size: 2.5rem; margin-bottom: 25px; color: var(--text-light); }
-
-.bio-container { position: relative; max-width: 850px; }
-.bio-container p { color: var(--gray); margin-bottom: 20px; }
-
-/* LÓGICA DE EXPANSIÓN (READ MORE) */
-.more-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.7s cubic-bezier(0, 1, 0, 1);
+.overline { 
+    color: var(--gold); 
+    font-size: 0.7rem; 
+    letter-spacing: 3px; 
+    margin-bottom: 20px; 
+    display: block; 
+    text-transform: uppercase;
 }
 
-.more-content.expanded {
-    max-height: 2000px;
-    transition: max-height 0.7s ease-in-out;
+/* SECCIÓN OBRAS (ESTILO DE REFERENCIA) */
+.works { 
+    padding: 60px 5%; 
+    background-color: var(--bg-dark); 
 }
 
-.btn-expand {
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.1rem;
+.works-layout {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    float: right;
-    margin-top: -15px;
+    gap: 60px;
+    align-items: flex-start;
 }
 
-.btn-expand:hover { background: var(--gold); color: black; }
+.works-info { flex: 1.6; }
+.works-visual { flex: 1; }
 
-/* GRID DE IMÁGENES */
-.grid-works {
-    display: flex;
-    align-items: flex-end; /* Alinea todas las bases al mismo nivel */
-    justify-content: center;
-    gap: 20px;
-    margin-top: 60px;
-    padding: 0 5%;
-    flex-wrap: nowrap; /* Evita que se bajen a la siguiente línea */
-}
-
-.work-item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1; /* Todas ocupan el mismo ancho de columna */
-}
-
-.work-item img {
+.img-side {
     width: 100%;
     height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(166, 138, 86, 0.2);
 }
 
+/* MARCOS DORADOS DE TAMAÑOS */
+.grid-sizes {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 60px;
+}
 
-/* Escala decreciente de alturas máximas */
-.size-lg img { max-height: 400px; width: auto; }
-.size-md img { max-height: 320px; width: auto; }
-.size-sm img { max-height: 250px; width: auto; }
-.size-xs img { max-height: 200px; width: auto; }
-.size-xxs img { max-height: 150px; width: auto; }
+.size-box {
+    border: 1px solid var(--gold);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
 
-/* Ajuste para que el texto no se pegue */
-.work-item span {
-    margin-top: 15px;
-    font-size: 0.75rem;
+.size-box span {
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.6rem;
     color: var(--gray);
     white-space: nowrap;
 }
-.work-item img:hover { transform: translateY(-8px); }
 
+/* Escala Proporcional de Marcos */
+.size-lg { width: 130px; height: 180px; }
+.size-md { width: 110px; height: 140px; }
+.size-sm { width: 85px; height: 85px; }
+.size-xs { width: 70px; height: 95px; }
+.size-xxs { width: 50px; height: 65px; }
 
-.center-btn { text-align: center; margin-top: 60px; }
+/* FILA DE TÍTULO Y BOTÓN COTIZAR */
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.work-subtitle {
+    font-size: 3.5rem;
+    color: var(--text-light);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.btn-cotizar {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-cotizar:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* DESCRIPCIÓN Y EXPANSIÓN */
+.bio-container { max-width: 800px; }
+.bio-container p { color: var(--text-light); opacity: 0.8; margin-bottom: 20px; }
+
+.more-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+.more-content.expanded { max-height: 2000px; }
+
+.btn-expand {
+    background: transparent;
+    border: none;
+    color: var(--gold);
+    cursor: pointer;
+    font-size: 1.2rem;
+    float: right;
+}
 
 /* FOOTER */
 footer { padding: 60px 10%; border-top: 1px solid #1a1a1a; }
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 0.7rem;
     color: var(--gray);
-    letter-spacing: 1px;
 }
 
-.brand-credit { color: var(--gold); text-decoration: none; font-weight: bold; }
-.brand-credit:hover { color: #fff; }
-
-.footer-right a { color: var(--gray); text-decoration: none; transition: 0.3s; }
-.footer-right a:hover { color: var(--gold); }
-
-/* RESPONSIVE GENERAL */
-@media (max-width: 992px) {
-    .hero-content h1 { font-size: 2.8rem; }
-    .about { flex-direction: column; text-align: center; gap: 40px; }
-    .btn-expand { float: none; margin: 10px auto; }
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .works-layout { flex-direction: column; }
+    .works-visual { width: 100%; order: -1; margin-bottom: 40px; }
+    .grid-sizes { flex-wrap: wrap; gap: 45px; justify-content: center; }
+    .work-subtitle { font-size: 2.5rem; }
 }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .footer-container { flex-direction: column; gap: 20px; text-align: center; }
-}
-
-
-/* ----------------------------------------------------
-   NUEVA SECCIÓN: TRES VIDEOS EN LÍNEA FULL WIDTH 
----------------------------------------------------- */
-.work-video-container-triple {
-    display: flex;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    background-color: var(--bg-dark);
-    flex-wrap: nowrap; /* Evita que los videos salten de línea */
-}
-
-.work-video-track {
-    flex: 1;
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-}
-
-.work-video-item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.work-video-item:hover {
-    filter: grayscale(0%);
-}
-
-/* Adaptación responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.2rem; /* Achicamos el texto para que entre bien en pantallas chicas */
-    }
-
-    /* Quitamos el cambio a columna para que sigan pegados en una línea */
-    .work-video-container-triple {
-        flex-direction: row; 
-        height: auto;
-    }
-
-    /* Reducimos el margen en mobile para que no quede tanto espacio blanco */
-    .work-video-container-triple {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .grid-works {
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding-bottom: 20px;
-    }
-    .work-item {
-        min-width: 120px; /* Tamaño mínimo para que sean legibles en móvil */
-    }
+    .hero-content h1 { font-size: 2.5rem; }
+    .title-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .about { flex-direction: column; text-align: center; }
 }
